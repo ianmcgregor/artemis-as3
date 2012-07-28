@@ -5,7 +5,7 @@ package com.gamadu.starwarrior.systems {
 	import com.gamadu.starwarrior.components.Enemy;
 	import com.gamadu.starwarrior.components.Transform;
 	import com.gamadu.starwarrior.components.Velocity;
-	import org.alwaysinbeta.starwarrior.GameContainer;
+	import org.alwaysinbeta.game.GameContainer;
 
 	public class EnemyShipMovementSystem extends EntityProcessingSystem {
 		private var _container : GameContainer;

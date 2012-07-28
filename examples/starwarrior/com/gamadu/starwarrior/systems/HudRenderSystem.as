@@ -6,9 +6,9 @@ package com.gamadu.starwarrior.systems {
 	import com.gamadu.starwarrior.components.Health;
 	import com.gamadu.starwarrior.components.Player;
 	import flash.display.BitmapData;
-	import org.alwaysinbeta.starwarrior.Canvas;
-	import org.alwaysinbeta.starwarrior.GameContainer;
-	import org.alwaysinbeta.starwarrior.TextStamp;
+	import org.alwaysinbeta.game.Canvas;
+	import org.alwaysinbeta.game.GameContainer;
+	import org.alwaysinbeta.game.TextStamp;
 
 
 	public class HudRenderSystem extends EntityProcessingSystem {

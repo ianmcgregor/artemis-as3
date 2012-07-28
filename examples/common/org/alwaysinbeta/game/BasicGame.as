@@ -1,10 +1,11 @@
-package org.alwaysinbeta.starwarrior {
+package org.alwaysinbeta.game {
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageQuality;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
 	import flash.utils.getTimer;
+	import org.alwaysinbeta.debug.FPS;
 
 	/**
 	 * @author ian

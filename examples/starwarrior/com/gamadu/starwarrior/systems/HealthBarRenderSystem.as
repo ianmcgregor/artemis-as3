@@ -7,8 +7,8 @@ package com.gamadu.starwarrior.systems {
 	import com.gamadu.starwarrior.components.Transform;
 	import flash.display.BitmapData;
 	import flash.geom.Rectangle;
-	import org.alwaysinbeta.starwarrior.Canvas;
-	import org.alwaysinbeta.starwarrior.GameContainer;
+	import org.alwaysinbeta.game.Canvas;
+	import org.alwaysinbeta.game.GameContainer;
 
 
 	public class HealthBarRenderSystem extends EntityProcessingSystem {

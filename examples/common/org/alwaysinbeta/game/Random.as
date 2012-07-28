@@ -1,4 +1,4 @@
-package org.alwaysinbeta.starwarrior {
+package org.alwaysinbeta.game {
 	/**
 	 * @author ian
 	 */

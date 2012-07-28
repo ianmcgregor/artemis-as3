@@ -12,9 +12,9 @@ package com.gamadu.starwarrior.systems {
 	import com.gamadu.starwarrior.spatials.Missile;
 	import com.gamadu.starwarrior.spatials.PlayerShip;
 	import com.gamadu.starwarrior.spatials.Spatial;
+	import org.alwaysinbeta.game.Canvas;
+	import org.alwaysinbeta.game.GameContainer;
 
-	import org.alwaysinbeta.starwarrior.Canvas;
-	import org.alwaysinbeta.starwarrior.GameContainer;
 
 	public class RenderSystem extends EntityProcessingSystem {
 		private var _graphics : Canvas;

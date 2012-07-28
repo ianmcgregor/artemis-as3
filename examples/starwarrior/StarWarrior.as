@@ -21,15 +21,15 @@ package {
 	import com.gamadu.starwarrior.systems.MovementSystem;
 	import com.gamadu.starwarrior.systems.PlayerShipControlSystem;
 	import com.gamadu.starwarrior.systems.RenderSystem;
+	import org.alwaysinbeta.debug.Monitor;
+	import org.alwaysinbeta.game.BasicGame;
+	import org.alwaysinbeta.game.Canvas;
+	import org.alwaysinbeta.game.GameContainer;
 
-	import org.alwaysinbeta.starwarrior.BasicGame;
-	import org.alwaysinbeta.starwarrior.Canvas;
-	import org.alwaysinbeta.starwarrior.EntityMonitor;
-	import org.alwaysinbeta.starwarrior.GameContainer;
 
 	[SWF(backgroundColor="#000000", frameRate="60", width="640", height="480")]
 	
-	public class StarWarrior extends BasicGame {
+	public final class StarWarrior extends BasicGame {
 		private var _world : World;
 		private var _container : GameContainer;
 		private var _renderSystem : EntitySystem;
@@ -42,7 +42,7 @@ package {
 		private var _healthBarRenderSystem : EntitySystem;
 		private var _enemySpawnSystem : EntitySystem;
 		private var _expirationSystem : EntitySystem;
-		private var _debug : EntityMonitor;
+		private var _debug : Monitor;
 
 		public function StarWarrior() {
 			super(640, 480);
@@ -70,7 +70,7 @@ package {
 			initPlayerShip();
 			initEnemyShips();
 			
-			addChild(_debug = new EntityMonitor(_world));
+			addChild(_debug = new Monitor(_world));
 			_debug.x = _container.getWidth() - _debug.width;
 			
 			

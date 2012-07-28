@@ -4,8 +4,8 @@ package com.gamadu.starwarrior.systems {
 	import com.artemis.EntityProcessingSystem;
 	import com.gamadu.starwarrior.components.Transform;
 	import com.gamadu.starwarrior.components.Velocity;
+	import org.alwaysinbeta.game.GameContainer;
 
-	import org.alwaysinbeta.starwarrior.GameContainer;
 
 	public class MovementSystem extends EntityProcessingSystem {
 		private var _container : GameContainer;

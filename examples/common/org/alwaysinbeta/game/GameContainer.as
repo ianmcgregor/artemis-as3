@@ -1,4 +1,4 @@
-package org.alwaysinbeta.starwarrior {
+package org.alwaysinbeta.game {
 	import flash.display.Bitmap;
 	import flash.events.Event;
 

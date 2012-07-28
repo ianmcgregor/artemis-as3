@@ -1,4 +1,4 @@
-package org.alwaysinbeta.starwarrior {
+package org.alwaysinbeta.game {
 	import flash.display.BitmapData;
 	import flash.display.IBitmapDrawable;
 	import flash.display.Stage;

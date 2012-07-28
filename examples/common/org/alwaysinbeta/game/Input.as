@@ -1,4 +1,4 @@
-package org.alwaysinbeta.starwarrior{
+package org.alwaysinbeta.game{
 	import com.gamadu.starwarrior.systems.IKeyListener;
 	import flash.display.Stage;
 	import flash.events.KeyboardEvent;

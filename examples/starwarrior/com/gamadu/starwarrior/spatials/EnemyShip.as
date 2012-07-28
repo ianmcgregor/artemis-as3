@@ -3,10 +3,10 @@ package com.gamadu.starwarrior.spatials {
 	import com.artemis.Entity;
 	import com.artemis.World;
 	import com.gamadu.starwarrior.components.Transform;
-
 	import flash.display.BitmapData;
+	import org.alwaysinbeta.game.Canvas;
 
-	import org.alwaysinbeta.starwarrior.Canvas;
+
 
 	public class EnemyShip extends Spatial {
 		private var _transform : Transform;

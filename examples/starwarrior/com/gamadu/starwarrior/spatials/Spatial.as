@@ -1,8 +1,8 @@
 package com.gamadu.starwarrior.spatials {
 	import com.artemis.Entity;
 	import com.artemis.World;
+	import org.alwaysinbeta.game.Canvas;
 
-	import org.alwaysinbeta.starwarrior.Canvas;
 
 	public class Spatial {
 		protected var _world : World;

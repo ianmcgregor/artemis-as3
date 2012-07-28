@@ -1,18 +1,22 @@
-package org.alwaysinbeta.starwarrior {
+package org.alwaysinbeta.debug {
+	import com.artemis.EntityManager;
+	import com.artemis.World;
+
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.events.Event;
-	import flash.system.System;
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
-	import flash.utils.getTimer;
 
-	public final class FPS extends Bitmap {
+	public final class Monitor extends Bitmap {
 		private var _text : TextField;
+		private var _world : World;
 
-		public function FPS() {
+		public function Monitor(world : World) {
 			super();
+
+			_world = world;
 
 			initialize();
 
@@ -28,7 +32,7 @@ package org.alwaysinbeta.starwarrior {
 			_text.width = 120;
 			_text.height = 120;
 
-			bitmapData = new BitmapData(80, 52, false, 0xff000000);
+			bitmapData = new BitmapData(100, 62, false, 0xff000000);
 		}
 
 		private function onAddedToStage(event : Event) : void {
@@ -55,55 +59,17 @@ package org.alwaysinbeta.starwarrior {
 		}
 
 		private function onEnterFrame(event : Event) : void {
-			updateFps();
-			updateMem();
-
+			var entityManager : EntityManager = _world.getEntityManager();
 			var info : String = "";
-			var frameRate : Number = stage.frameRate;
-			info += "FPS: " + _currentFps + "/" + frameRate + "\n";
-			info += "AVE: " + _averageFps + "/" + frameRate + "\n";
-			info += "MEM: " + _mem + "\n";
-			info += "MAX: " + _memMax + "\n";
+			info += "ENTITIES: " + "\n";
+			info += "COUNT: " + entityManager.getEntityCount() + "\n";
+			info += "CREATED: " + entityManager.getTotalCreated() + "\n";
+			info += "REMOVED: " + entityManager.getTotalRemoved() + "\n";
+			info += "DELTA: " + _world.getDelta() + "ms" + "\n";
 			_text.text = info;
 
 			bitmapData.fillRect(bitmapData.rect, 0xFF000000);
 			bitmapData.draw(_text);
-		}
-
-		// FPS
-		private var _timer : uint;
-		private var _ms : uint;
-		private var _fps : uint;
-		private var _currentFps : uint;
-		private var _averageFps : uint;
-		private var _ticks : uint;
-		private var _total : uint;
-
-		private function updateFps() : void {
-			_timer = getTimer();
-
-			if (_timer - 1000 > _ms) {
-				_ms = _timer;
-				_currentFps = _fps;
-				_fps = 0;
-				
-				if (_currentFps > 1) {
-					_ticks ++;
-					_total += _currentFps;
-					_averageFps = Math.round(_total / _ticks);
-				}
-			}
-
-			_fps++;
-		}
-
-		// MEMORY
-		private var _mem : Number = 0;
-		private var _memMax : Number = 0;
-
-		private function updateMem() : void {
-			_mem = Number((System.totalMemory * 0.000000954).toFixed(3));
-			_memMax = _memMax > _mem ? _memMax : _mem;
 		}
 	}
 }

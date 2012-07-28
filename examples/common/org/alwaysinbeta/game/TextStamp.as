@@ -1,4 +1,4 @@
-package org.alwaysinbeta.starwarrior {
+package org.alwaysinbeta.game {
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFormat;
 	import flash.display.BitmapData;

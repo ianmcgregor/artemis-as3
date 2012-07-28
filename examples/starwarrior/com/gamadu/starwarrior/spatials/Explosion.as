@@ -4,12 +4,12 @@ package com.gamadu.starwarrior.spatials {
 	import com.artemis.World;
 	import com.gamadu.starwarrior.components.Expires;
 	import com.gamadu.starwarrior.components.Transform;
-
 	import flash.display.Graphics;
 	import flash.display.Shape;
 	import flash.geom.Matrix;
+	import org.alwaysinbeta.game.Canvas;
 
-	import org.alwaysinbeta.starwarrior.Canvas;
+
 
 	public class Explosion extends Spatial {
 		private var _transform : Transform;

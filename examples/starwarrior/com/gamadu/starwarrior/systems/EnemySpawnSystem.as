@@ -8,8 +8,8 @@ package com.gamadu.starwarrior.systems {
 	import com.gamadu.starwarrior.components.Transform;
 	import com.gamadu.starwarrior.components.Velocity;
 	import com.gamadu.starwarrior.components.Weapon;
+	import org.alwaysinbeta.game.GameContainer;
 
-	import org.alwaysinbeta.starwarrior.GameContainer;
 
 	public class EnemySpawnSystem extends IntervalEntitySystem {
 		private var _weaponMapper : ComponentMapper;
