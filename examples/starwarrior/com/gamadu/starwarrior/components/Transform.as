@@ -3,64 +3,63 @@ package com.gamadu.starwarrior.components {
 	import com.artemis.utils.Utils;
 
 	public class Transform extends Component {
-		private var x : Number;
-		private var y : Number;
-		private var rotation : Number;
+		private var _x : Number;
+		private var _y : Number;
+		private var _rotation : Number;
 
 		public function Transform(x : Number = 0, y : Number = 0, rotation : Number = 0) {
-			this.x = x;
-			this.y = y;
-			this.rotation = rotation;
+			_x = x;
+			_y = y;
+			_rotation = rotation;
 		}
 
 		public function addX(x : Number) : void {
-			this.x += x;
+			_x += x;
 		}
 
 		public function addY(y : Number) : void {
-			this.y += y;
+			_y += y;
 		}
 
 		public function getX() : Number {
-			return x;
+			return _x;
 		}
 
 		public function setX(x : Number) : void {
-			this.x = x;
+			_x = x;
 		}
 
 		public function getY() : Number {
-			return y;
+			return _y;
 		}
 
 		public function setY(y : Number) : void {
-			this.y = y;
+			_y = y;
 		}
 
 		public function setLocation(x : Number, y : Number) : void {
-			// trace("Transform.setLocation(",x, y,")");
-			this.x = x;
-			this.y = y;
+			_x = x;
+			_y = y;
 		}
 
 		public function getRotation() : Number {
-			return rotation;
+			return _rotation;
 		}
 
 		public function setRotation(rotation : Number) : void {
-			this.rotation = rotation;
+			_rotation = rotation;
 		}
 
 		public function addRotation(angle : Number) : void {
-			rotation = (rotation + angle) % 360;
+			_rotation = (_rotation + angle) % 360;
 		}
 
 		public function getRotationAsRadians() : Number {
-			return Utils.toRadians(rotation);
+			return Utils.toRadians(_rotation);
 		}
 
 		public function getDistanceTo(t : Transform) : Number {
-			return Utils.distance(t.getX(), t.getY(), x, y);
+			return Utils.distance(t.getX(), t.getY(), _x, _y);
 		}
 	}
 }

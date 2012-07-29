@@ -2,33 +2,33 @@ package com.gamadu.starwarrior.components {
 	import com.artemis.Component;
 
 	public class Health extends Component {
-		private var health : Number;
-		private var maximumHealth : Number;
+		private var _health : Number;
+		private var _maximumHealth : Number;
 
 		public function Health(health : Number) {
-			this.health = this.maximumHealth = health;
+			_health = _maximumHealth = health;
 		}
 
 		public function getHealth() : Number {
-			return health;
+			return _health;
 		}
 
 		public function getMaximumHealth() : Number {
-			return maximumHealth;
+			return _maximumHealth;
 		}
 
 		public function getHealthPercentage() : int {
-			return Math.round(health / maximumHealth * 100);
+			return Math.round(_health / _maximumHealth * 100);
 		}
 
 		public function addDamage(damage : int) : void {
-			health -= damage;
-			if (health < 0)
-				health = 0;
+			_health -= damage;
+			if (_health < 0)
+				_health = 0;
 		}
 
 		public function isAlive() : Boolean {
-			return health > 0;
+			return _health > 0;
 		}
 	}
 }

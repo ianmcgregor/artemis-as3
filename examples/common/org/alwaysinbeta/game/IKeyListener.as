@@ -1,5 +1,4 @@
-package com.gamadu.starwarrior.systems {
-	import org.alwaysinbeta.game.Input;
+package org.alwaysinbeta.game {
 	/**
 	 * @author ian
 	 */

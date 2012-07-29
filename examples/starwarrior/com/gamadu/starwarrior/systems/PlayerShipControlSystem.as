@@ -6,9 +6,12 @@ package com.gamadu.starwarrior.systems {
 	import com.gamadu.starwarrior.components.Player;
 	import com.gamadu.starwarrior.components.Transform;
 	import com.gamadu.starwarrior.components.Velocity;
-	import flash.ui.Keyboard;
+
 	import org.alwaysinbeta.game.GameContainer;
+	import org.alwaysinbeta.game.IKeyListener;
 	import org.alwaysinbeta.game.Input;
+
+	import flash.ui.Keyboard;
 
 	public class PlayerShipControlSystem extends EntityProcessingSystem implements IKeyListener {
 		private var _container : GameContainer;

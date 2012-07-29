@@ -26,7 +26,6 @@ package com.artemis {
 			_actives = new Bag();
 
 			// for (Class<? extends Component> type : types) {
-			// for (var type: Class in types) {
 			for each (var type: Class in types) {
 				var ct : ComponentType = ComponentTypeManager.getTypeFor(type);
 				_typeFlags |= ct.getBit();
@@ -34,14 +33,14 @@ package com.artemis {
 		}
 
 		public function setSystemBit(bit : uint) : void {
-			this._systemBit = bit;
+			_systemBit = bit;
 		}
 
 		/**
 		 * Called before processing of entities begins. 
 		 */
 		protected function begin() : void {
-		};
+		}
 
 		public function process() : void {
 			if (checkProcessing()) {
@@ -66,7 +65,7 @@ package com.artemis {
 		// protected abstract function processEntities(ImmutableBag<Entity> entities):void ;
 		// protected function processEntities(entities: IImmutableBag, accumulatedDelta:int):void ;
 		protected function processEntities(entities : IImmutableBag) : void {
-		};
+		}
 
 		/**
 		 * 
@@ -75,27 +74,27 @@ package com.artemis {
 		// protected abstract function checkProcessing():Boolean ;
 		protected function checkProcessing() : Boolean {
 			return false;
-		};
+		}
 
 		/**
 		 * Override to implement code that gets executed when systems are initialized.
 		 */
 		public function initialize() : void {
-		};
+		}
 
 		/**
 		 * Called if the system has received a entity it is interested in, e.g. created or a component was added to it.
 		 * @param e the entity that was added to this system.
 		 */
 		protected function added(e : Entity) : void {
-		};
+		}
 
 		/**
 		 * Called if a entity was removed from this system, e.g. deleted or had one of it's components removed.
 		 * @param e the entity that was removed from this system.
 		 */
 		protected function removed(e : Entity) : void {
-		};
+		}
 
 		public function change(e : Entity) : void {
 //			trace("EntitySystem.change(",e,")");
@@ -122,7 +121,7 @@ package com.artemis {
 		}
 
 		public function setWorld(world : World) : void {
-			this._world = world;
+			_world = world;
 		}
 
 		/**

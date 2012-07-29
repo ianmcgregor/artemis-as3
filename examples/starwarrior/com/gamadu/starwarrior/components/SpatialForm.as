@@ -2,14 +2,14 @@ package com.gamadu.starwarrior.components {
 	import com.artemis.Component;
 
 	public class SpatialForm extends Component {
-		private var spatialFormFile : String;
+		private var _spatialFormFile : String;
 
 		public function SpatialForm(spatialFormFile : String) {
-			this.spatialFormFile = spatialFormFile;
+			_spatialFormFile = spatialFormFile;
 		}
 
 		public function getSpatialFormFile() : String {
-			return spatialFormFile;
+			return _spatialFormFile;
 		}
 	}
 }
